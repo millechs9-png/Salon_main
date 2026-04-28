@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="mystore.css">
+
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">Macoy's Straightening Salon</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="mystore.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Services</span>
+				</a>
+			</li>
+			<li>
+				<a href="analytics.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="feedback.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Feedback</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="settings.html">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="logout.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn" title="submit"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="notification.html" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="profile.html" class="profile" title="profile">
+				<img src="people.png" alt="Profile">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Services</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="index.html">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Services</a>
+						</li>
+					</ul>
+				</div>
+				<a href="download.html" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bx-package' ></i>
+					<span class="text">
+						<h3>45</h3>
+						<p>Total Services</p>
+					</span>
+				</li>
+
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>$3,542</h3>
+						<p>Revenue Today</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Services & Pricing</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Service</th>
+								<th>Price</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<i class='bx bx-scissors' ></i>
+									<p>Hair Straightening</p>
+								</td>
+								<td>$150.00</td>
+								<td><span class="status completed">Available</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-cut' ></i>
+									<p>Haircut & Style</p>
+								</td>
+								<td>$45.00</td>
+								<td><span class="status completed">Available</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-color-fill' ></i>
+									<p>Hair Coloring</p>
+								</td>
+								<td>$120.00</td>
+								<td><span class="status completed">Available</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-brush' ></i>
+									<p>Keratin Treatment</p>
+								</td>
+								<td>$250.00</td>
+								<td><span class="status pending">Limited</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-hairstyle' ></i>
+									<p>Hair Spa</p>
+								</td>
+								<td>$80.00</td>
+								<td><span class="status completed">Available</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-droplet' ></i>
+									<p>Hair Rebonding</p>
+								</td>
+								<td>$200.00</td>
+								<td><span class="status completed">Available</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-outline' ></i>
+									<p>Blow Dry</p>
+								</td>
+								<td>$35.00</td>
+								<td><span class="status completed">Available</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-palette' ></i>
+									<p>Highlights</p>
+								</td>
+								<td>$180.00</td>
+								<td><span class="status process">Booking</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+</body>
+</html>
+

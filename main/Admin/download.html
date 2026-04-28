@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="download.css">
+
+	<title>Downloads - AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="index.html" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">Macoy's Straightening Salon</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="mystore.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Services</span>
+				</a>
+			</li>
+			<li>
+				<a href="analytics.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="feedback.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Feedback</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="settings.html">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="logout.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn" title="search"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="notification.html" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="profile.html" class="profile" title="Profile">
+				<img src="people.png" alt="Profile">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Downloads</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="index.html">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Downloads</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Download Filters -->
+			<div class="download-filters">
+				<button class="filter-btn active" data-filter="all">All Files</button>
+				<button class="filter-btn" data-filter="pdf">PDF</button>
+				<button class="filter-btn" data-filter="excel">Excel</button>
+				<button class="filter-btn" data-filter="csv">CSV</button>
+				<button class="filter-btn" data-filter="image">Images</button>
+			</div>
+
+			<!-- Download Stats -->
+			<div class="download-stats">
+				<div class="stat-card">
+					<div class="stat-icon">
+						<i class='bx bx-file'></i>
+					</div>
+					<div class="stat-info">
+						<h3>24</h3>
+						<p>Total Files</p>
+					</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-icon">
+						<i class='bx bx-download'></i>
+					</div>
+					<div class="stat-info">
+						<h3>156</h3>
+						<p>Total Downloads</p>
+					</div>
+				</div>
+				<div class="stat-card">
+					<div class="stat-icon">
+						<i class='bx bx-data'></i>
+					</div>
+					<div class="stat-info">
+						<h3>2.4 GB</h3>
+						<p>Storage Used</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Download List -->
+			<div class="downloads-container">
+				
+				<!-- Recent Downloads -->
+				<div class="download-section">
+					<h3 class="section-title">Recent Downloads</h3>
+					
+					<div class="download-item" data-type="pdf">
+						<div class="download-icon pdf">
+							<i class='bx bxs-file-pdf'></i>
+						</div>
+						<div class="download-info">
+							<h4>Sales Report - January 2024</h4>
+							<p>Complete sales data and revenue analysis for January</p>
+							<span class="file-meta">PDF • 2.4 MB • Jan 15, 2024</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 45</span>
+							<button class="download-btn" onclick="downloadFile('Sales Report - January 2024.pdf')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+
+					<div class="download-item" data-type="excel">
+						<div class="download-icon excel">
+							<i class='bx bxs-file-spreadsheet'></i>
+						</div>
+						<div class="download-info">
+							<h4>Customer Database</h4>
+							<p>Complete list of all registered customers</p>
+							<span class="file-meta">Excel • 1.8 MB • Jan 14, 2024</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 32</span>
+							<button class="download-btn" onclick="downloadFile('Customer Database.xlsx')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+
+					<div class="download-item" data-type="csv">
+						<div class="download-icon csv">
+							<i class='bx bxs-file-css'></i>
+						</div>
+						<div class="download-info">
+							<h4>Order History Export</h4>
+							<p>All order transactions with payment details</p>
+							<span class="file-meta">CSV • 856 KB • Jan 13, 2024</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 28</span>
+							<button class="download-btn" onclick="downloadFile('Order History Export.csv')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Available Reports -->
+				<div class="download-section">
+					<h3 class="section-title">Available Reports</h3>
+					
+					<div class="download-item" data-type="pdf">
+						<div class="download-icon pdf">
+							<i class='bx bxs-file-pdf'></i>
+						</div>
+						<div class="download-info">
+							<h4>Annual Business Summary 2023</h4>
+							<p>Comprehensive yearly performance report</p>
+							<span class="file-meta">PDF • 8.5 MB • Jan 1, 2024</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 67</span>
+							<button class="download-btn" onclick="downloadFile('Annual Business Summary 2023.pdf')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+
+					<div class="download-item" data-type="pdf">
+						<div class="download-icon pdf">
+							<i class='bx bxs-file-pdf'></i>
+						</div>
+						<div class="download-info">
+							<h4>Tax Documentation 2023</h4>
+							<p>Required tax documents and receipts</p>
+							<span class="file-meta">PDF • 3.2 MB • Dec 28, 2023</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 15</span>
+							<button class="download-btn" onclick="downloadFile('Tax Documentation 2023.pdf')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+
+					<div class="download-item" data-type="excel">
+						<div class="download-icon excel">
+							<i class='bx bxs-file-spreadsheet'></i>
+						</div>
+						<div class="download-info">
+							<h4>Inventory Stock Report</h4>
+							<p>Current inventory levels and product details</p>
+							<span class="file-meta">Excel • 1.2 MB • Dec 25, 2023</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 23</span>
+							<button class="download-btn" onclick="downloadFile('Inventory Stock Report.xlsx')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+
+					<div class="download-item" data-type="csv">
+						<div class="download-icon csv">
+							<i class='bx bxs-file-css'></i>
+						</div>
+						<div class="download-info">
+							<h4>Employee Attendance Log</h4>
+							<p>Staff attendance records for December</p>
+							<span class="file-meta">CSV • 245 KB • Dec 20, 2023</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 8</span>
+							<button class="download-btn" onclick="downloadFile('Employee Attendance Log.csv')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Media Files -->
+				<div class="download-section">
+					<h3 class="section-title">Media & Assets</h3>
+					
+					<div class="download-item" data-type="image">
+						<div class="download-icon image">
+							<i class='bx bxs-image'></i>
+						</div>
+						<div class="download-info">
+							<h4>Brand Assets Package</h4>
+							<p>Logos, banners, and marketing materials</p>
+							<span class="file-meta">ZIP • 15.6 MB • Dec 15, 2023</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 42</span>
+							<button class="download-btn" onclick="downloadFile('Brand Assets Package.zip')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+
+					<div class="download-item" data-type="image">
+						<div class="download-icon image">
+							<i class='bx bxs-image'></i>
+						</div>
+						<div class="download-info">
+							<h4>Product Gallery</h4>
+							<p>High-resolution product images</p>
+							<span class="file-meta">ZIP • 28.4 MB • Dec 10, 2023</span>
+						</div>
+						<div class="download-actions">
+							<span class="download-count"><i class='bx bx-download'></i> 19</span>
+							<button class="download-btn" onclick="downloadFile('Product Gallery.zip')">
+								<i class='bx bx-download'></i>
+								Download
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Generate New Report -->
+			<div class="generate-section">
+				<h3 class="section-title">Generate New Report</h3>
+				<div class="generate-form">
+					<div class="form-group">
+						<label>Report Type</label>
+						<select id="reportType" title="Select report type">
+							<option value="">Select report type...</option>
+							<option value="sales">Sales Report</option>
+							<option value="inventory">Inventory Report</option>
+							<option value="customer">Customer Analysis</option>
+							<option value="employee">Employee Performance</option>
+							<option value="financial">Financial Summary</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Date Range</label>
+						<div class="date-range">
+							<input type="date" id="startDate" title="Start date">
+							<span>to</span>
+							<input type="date" id="endDate" title="endate">
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Format</label>
+						<div class="format-options">
+							<label class="format-option">
+								<input type="radio" name="format" value="pdf" checked>
+								<span><i class='bx bxs-file-pdf'></i> PDF</span>
+							</label>
+							<label class="format-option">
+								<input type="radio" name="format" value="excel">
+								<span><i class='bx bxs-file-spreadsheet'></i> Excel</span>
+							</label>
+							<label class="format-option">
+								<input type="radio" name="format" value="csv">
+								<span><i class='bx bxs-file-css'></i> CSV</span>
+							</label>
+						</div>
+					</div>
+					<button class="generate-btn" onclick="generateReport()">
+						<i class='bx bx-cog'></i>
+						Generate Report
+					</button>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+	<script>
+		// Download functionality
+		function downloadFile(filename) {
+			// Simulate download
+			const btn = event.currentTarget;
+			btn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Downloading...';
+			btn.classList.add('downloading');
+			
+			setTimeout(() => {
+				btn.innerHTML = '<i class="bx bx-check"></i> Downloaded';
+				btn.classList.remove('downloading');
+				btn.classList.add('downloaded');
+				
+				// Update download count
+				const countEl = btn.previousElementSibling;
+				if (countEl) {
+					const currentCount = parseInt(countEl.textContent);
+					countEl.innerHTML = `<i class='bx bx-download'></i> ${currentCount + 1}`;
+				}
+				
+				setTimeout(() => {
+					btn.innerHTML = '<i class="bx bx-download"></i> Download';
+					btn.classList.remove('downloaded');
+				}, 2000);
+			}, 1500);
+		}
+
+		// Generate new report
+		function generateReport() {
+			const reportType = document.getElementById('reportType').value;
+			const startDate = document.getElementById('startDate').value;
+			const endDate = document.getElementById('endDate').value;
+			const format = document.querySelector('input[name="format"]:checked').value;
+			
+			if (!reportType) {
+				alert('Please select a report type');
+				return;
+			}
+			
+			if (!startDate || !endDate) {
+				alert('Please select a date range');
+				return;
+			}
+			
+			const btn = document.querySelector('.generate-btn');
+			btn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Generating...';
+			btn.disabled = true;
+			
+			setTimeout(() => {
+				btn.innerHTML = '<i class="bx bx-check"></i> Report Generated!';
+				btn.disabled = false;
+				
+				setTimeout(() => {
+					btn.innerHTML = '<i class="bx bx-cog"></i> Generate Report';
+				}, 2000);
+				
+				alert(`Your ${reportType} report has been generated and is ready for download in ${format.toUpperCase()} format.`);
+			}, 2000);
+		}
+
+		// Filter functionality
+		const filterBtns = document.querySelectorAll('.filter-btn');
+		filterBtns.forEach(btn => {
+			btn.addEventListener('click', () => {
+				filterBtns.forEach(b => b.classList.remove('active'));
+				btn.classList.add('active');
+				
+				const filter = btn.dataset.filter;
+				const downloadItems = document.querySelectorAll('.download-item');
+				
+				downloadItems.forEach(item => {
+					if (filter === 'all' || item.dataset.type === filter) {
+						item.style.display = 'flex';
+					} else {
+						item.style.display = 'none';
+					}
+				});
+			});
+		});
+
+		// Set default dates
+		const today = new Date();
+		const lastMonth = new Date();
+		lastMonth.setMonth(lastMonth.getMonth() - 1);
+		
+		document.getElementById('endDate').valueAsDate = today;
+		document.getElementById('startDate').valueAsDate = lastMonth;
+	</script>
+</body>
+</html>
+

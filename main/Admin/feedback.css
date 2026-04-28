@@ -1,0 +1,156 @@
+/* Feedback Page Custom Styles */
+/* Base styles are imported from style.css */
+
+/* Custom Box Info Colors for Feedback Page */
+#content main .box-info li:nth-child(1) .bx {
+	background: var(--light-red);
+	color: var(--pink);
+}
+
+#content main .box-info li:nth-child(2) .bx {
+	background: #E8FFCF;
+	color: #4CAF50;
+}
+
+#content main .box-info li:nth-child(3) .bx {
+	background: #FFCDD2;
+	color: #F44336;
+}
+
+/* Star Rating Styling */
+#content main .table-data .order table tbody tr td:nth-child(2) {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+#content main .table-data .order table tbody tr td i.bxs-star,
+#content main .table-data .order table tbody tr td i.bx-star {
+	font-size: 14px;
+	line-height: 1;
+}
+
+#content main .table-data .order table tbody tr td i.bxs-star {
+	color: #FFC107;
+}
+
+#content main .table-data .order table tbody tr td i.bx-star {
+	color: var(--dark-grey);
+}
+
+/* Customer Avatar Styling */
+#content main .table-data .order table tbody tr td:first-child {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+#content main .table-data .order table tbody tr td img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid var(--light-red);
+	transition: transform 0.3s ease;
+}
+
+#content main .table-data .order table tbody tr:hover td img {
+	transform: scale(1.5);
+}
+
+/* Status Badge - Centered in cell */
+#content main .table-data .order table tbody tr td:last-child {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#content main .table-data .order table tr td .status {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 16px;
+	font-size: 11px;
+}
+
+#content main .table-data .order table tr td .status.completed {
+	background: #4CAF50;
+}
+
+#content main .table-data .order table tr td .status.pending {
+	background: var(--orange);
+}
+
+#content main .table-data .order table tr td .status.process {
+	background: var(--red);
+}
+
+/* Recent Comments Todo List Styling */
+#content main .table-data .todo .todo-list li {
+	background: var(--grey);
+	border-radius: 10px;
+	padding: 14px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+#content main .table-data .todo .todo-list li:last-child {
+	margin-bottom: 0;
+}
+
+#content main .table-data .todo .todo-list li .bx {
+	cursor: pointer;
+	color: var(--dark-grey);
+	transition: color 0.3s ease;
+}
+
+#content main .table-data .todo .todo-list li .bx:hover {
+	color: var(--pink);
+}
+
+#content main .table-data .todo .todo-list li.completed {
+	border-left: 10px solid var(--pink);
+}
+
+#content main .table-data .todo .todo-list li.not-completed {
+	border-left: 10px solid var(--red);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+	#content main .table-data {
+		flex-direction: column;
+	}
+	
+	#content main .table-data .order,
+	#content main .table-data .todo {
+		flex-basis: 100%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#content main .box-info {
+		grid-template-columns: 1fr;
+	}
+	
+	#content main .head-title {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	#content main .head-title .btn-download {
+		width: 100%;
+		justify-content: center;
+		margin-top: 16px;
+	}
+	
+	#content main .table-data .order table tbody tr td:nth-child(2) {
+		gap: 2px;
+	}
+	
+	#content main .table-data .order table tbody tr td i {
+		font-size: 14px;
+	}
+}
+
