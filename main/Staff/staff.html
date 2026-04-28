@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+    <header>
+        <h1>Staff Dashboard</h1>
+        <nav>
+            <button onclick="showSection('bookings')">Bookings</button>
+            <button onclick="showSection('cancellations')">Cancellations</button>
+            <button onclick="showSection('walkins')">Walk-ins</button>
+            <button onclick="AUTH.logout(); window.location.href='../login.html';" style="margin-left:auto;background:#dc3545;">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Bookings Section -->
+        <section id="bookings" class="section active">
+            <h2>Pending Bookings</h2>
+            <table id="bookingsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Cancellations Section -->
+        <section id="cancellations" class="section">
+            <h2>Pending Cancellations</h2>
+            <table id="cancellationsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Booking ID</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Walk-ins Section -->
+        <section id="walkins" class="section">
+            <h2>Walk-in Customers</h2>
+            <form id="walkinForm">
+                <input type="text" id="customerName" placeholder="Customer Name" required>
+                <input type="tel" id="customerPhone" placeholder="Phone" required>
+                <input type="email" id="customerEmail" placeholder="Email">
+                <input type="text" id="serviceNeeded" placeholder="Service Needed" required>
+                <textarea id="notes" placeholder="Notes"></textarea>
+                <button type="submit">Add Walk-in</button>
+            </form>
+            <table id="walkinsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Phone</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../js/auth.js"></script>
+    <script>
+        // Protect staff page
+        if (!AUTH.isLoggedIn() || AUTH.getRole() !== 'staff') {
+            alert('Access denied. Staff login required.');
+            window.location.href = '../login.html';
+        }
+    </script>
+    <script src="staff.js"></script>
+</body>
+</html>
